@@ -16,24 +16,30 @@ font-family: "Poppins", serif;
   --primary-color: #16C47F;
   --secondary-color: #fff8f3;
   --secondary-btn-color: #fd6e0a;
+  --primary-btn-color: #594C8D;
 
   --text-color-gray: #474747;
   --text-color-white: #fff;
   --text-color-black: #000;
+  
+  
+  --sub-bg-color: #FBFBFF;
+  
+
  
 }
 
 
 .btn-primary {
-  font-size: 18px;
-  padding: 12px 20px;
+  font-size: 14px;
+  padding: 10px 20px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
   background-color: var(--primary-color);
   color: white;
   font-weight: 700;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
 
     &:hover{
       transform: scale(1.08);
@@ -54,6 +60,7 @@ header {
   background-position: center left;
   background-size: 80px;
   margin-left: 15px;
+  min-height: 100vh;
 }
 
 /* Nav Style  */
@@ -63,15 +70,17 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px 150px;
+  background-color: var(--text-color-white);
 
 
   .logo {
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
+    border: 0px 3px solid var(--primary-color) ;    
 
     span{
-      color: #16C47F;
+      color: var(--primary-color);  
     }
   }
 
@@ -80,12 +89,14 @@ nav {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 20px;
+    gap: 30px;
+    
 
     li a {
       text-decoration: none;
-      font-size: 20px;
-      margin-left: 40px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 20px;
       }
     }
 
@@ -102,7 +113,7 @@ nav {
       width: 50%;
 
       .banner-greeting {
-        font-size: 40px;
+        font-size: 30px;
         color: var(--text-color-gray);
       }
 
@@ -127,8 +138,14 @@ nav {
     .banner-profile-pic {
       display: grid;
       place-items: center ;
-      border: 5px solid var(--primary-color);
       border-radius: 50%;
+      border: 5px solid var(--primary-color);
+      transition: border .5s ease;
+
+      
+      &:hover {
+        border: 5px solid var(--secondary-btn-color);
+      }
 
 
       .banner-image {
@@ -150,40 +167,322 @@ nav {
 
 
 .about-section {
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0px 150px;
 
-  
-  .about-content {
-    width: 60%;
-    margin: 30px auto;
-   
+  .about-heading {
+    
+    .about-title {
+      display: inline-block;
+      border-bottom: 3px solid var(--primary-color);
+      padding: 16px 0px;
+    }
+    
     .about-des {
-      line-height: 1.8;
-      opacity: .8;
+      padding: 16px 64px;
+      margin: 0;
     }
   }
 
-  .about-items {
+
+  .about-container {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-top: 32px;
+    text-align: left;
+
+    .about-image {
+      width: 50%;
+      padding: 20px;
+      border: 2px solid var(--primary-color);
+      border-radius: 50%;
+      
+      img{
+        align-items: start;
+        width: 100%;
+      }
+    }
+  
+    .about-content {
+      width: 60%;
+
+      .sub-desc {
+        padding: 16px 0;
+      }
+
+      .about-info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        gap: 16px;
+        margin-top: 20px;
+
+            .about-item-left{
+              padding-left: 10px;
+              
+              table {
+                border-collapse: collapse;
+
+                td {
+                  padding: 8px 10px;
+                  vertical-align:top;
+                }
+                td i {
+                  color: var(--primary-color);
+                  padding-right: 5px;
+                }
+
+                td strong {
+                  display: inline-block;
+                  width: 80px;
+                  font-weight: bold;
+                }
+                td span  {
+                  display: inline-block;
+                  width: 10px;
+                  font-weight: bold;
+                }
+              }
+
+            }
+
+            .about-item-right{
+              padding-left: 10px;
+              
+              table {
+                border-collapse: collapse;
+
+                td {
+                  padding: 8px 10px;
+                  vertical-align:top;
+                }
+                td i {
+                  color: var(--primary-color);
+                  padding-right: 5px;
+                }
+
+                td strong {
+                  display: inline-block;
+                  width: 80px;
+                  font-weight: bold;
+                }
+                td span  {
+                  display: inline-block;
+                  width: 10px;
+                  font-weight: bold;
+                }
+              }
+
+            }
+      }
+    }
+  }
+    
+      .about-des {
+        margin-top: 32px;
+        line-height: 1.8;
+        opacity: .8;
+        text-align: justify;
+      }
+}
+
+
+.do-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px 130px;
+
+  .do-heading {
+    
+    .do-title {
+      display: inline-block;
+      border-bottom: 3px solid var(--primary-color);
+      padding: 16px 0px;
+    }
+    
+    .do-des {
+      padding: 16px 64px;
+      margin: 0;
+    }
+  }
+
+
+  .do-container {
     display: flex;
     justify-content: space-between;
-    gap: 56px;
+    align-items: center;
+    margin-top: 10px;
+    text-align: left;
 
-    .about-item {
-      .item-title {
-        text-decoration: underline;
-        margin-bottom: 15px;
+    .card-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: auto;
+      gap: 20px;
+      padding: 10px;
+      
+      
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        height: 280px;
+        background-color: rgba(22, 196, 127, .1);
+        border-radius: 10px;
+        border: 3px solid transparent;
+        transition: border 1s ease-in-out, transform 1s ease;
+        
+        &:hover{
+         transform: scale(1.05);
+         border: 2px solid var(--primary-color);
+         background-color: white;
+        }
+
+
+        .card-img{
+          width: 20%;
+          padding-top: 10px;
+        }
+        .card-heading{
+          font-size: 14px;
+          padding: 10px;
+        }
+        .card-content{
+          font-size: 14px;
+          line-height: 1.8;
+          opacity: .8;
+          border: none;
+          padding-top: 0px;
+        }
       }
-    
-    .item-des {
-      font-weight: bold;
     }
+
+  }
+}
+
+
+.resume-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px 130px;
+
+  .resume-heading {
+    
+    .resume-title {
+      display: inline-block;
+      border-bottom: 3px solid var(--primary-color);
+      padding: 16px 0px;
+    }
+    
+    .resume-des {
+      padding: 16px 64px;
+      margin: 0;
     }
   }
 
 
+  .resume-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    text-align: left;
+    gap: 20px;
+
+    .skills-left {
+      width: 50%;
+
+      .skill-heading {
+        display: inline-block;
+        border-bottom: 1px solid var(--primary-color);
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .study {
+        
+        .edu-heading {
+          padding-bottom: 5px;
+        }
+        .edu-subheading {
+          padding-bottom: 8px;
+        }
+        .edu-des {
+          width: 80%;
+          padding-bottom: 20px;
+          text-align: justify;
+        }
+
+      }
+
+    }
+
+
+
+    .skills-right {
+      width: 50%;
+
+      .skill-heading {
+        display: inline-block;
+        border-bottom: 1px solid var(--primary-color);
+        margin-bottom: 30px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .skill {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+
+        .skill-name{
+          width: 100px;
+          font-weight: 500;
+        }
+
+        .progress-bar{
+          flex: 1;
+          height: 6px;
+
+          background-color: #e6e6e6;
+          overflow: hidden;
+          position: relative;
+
+          .progress {
+            height: 100%;
+            background-color: var(--primary-btn-color);
+          }
+        }
+
+        .skill-percentage {
+          width: 60px;
+          text-align: right;
+          font-weight: 500;
+          font-size: 12x;
+        }
+
+
+
+      }
+    }
+  }
 }
