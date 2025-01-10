@@ -68,6 +68,7 @@ nav {
   .logo {
     font-size: 30px;
     font-weight: bold;
+    cursor: pointer;
 
     span{
       color: #16C47F;
@@ -126,6 +127,8 @@ nav {
     .banner-profile-pic {
       display: grid;
       place-items: center ;
+      border: 5px solid var(--primary-color);
+      border-radius: 50%;
 
 
       .banner-image {
@@ -134,11 +137,10 @@ nav {
        border-radius: 50%;
        object-fit: cover;
        padding: 10px;
-       border: 5px solid var(--primary-color);
-       transition: transform 2s ease;
+       transition: transform 1s ease;
 
        &:hover{
-         transform: scale(1.08);
+         transform: scale(1.05);
        }
 
       }
