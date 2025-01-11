@@ -402,31 +402,38 @@ nav {
   .resume-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
-    text-align: left;
-    gap: 20px;
+    gap: 50px;
+    margin-top: 10px;
 
     .skills-left {
-      width: 50%;
+      width: 40%;
 
       .skill-heading {
-        display: inline-block;
         border-bottom: 1px solid var(--primary-color);
-        margin-bottom: 30px;
+        display: inline-block;
         text-align: center;
+        margin: 0 auto; 
+        text-align: center; 
+      }
+
+      .edu-1 {
+        margin-top: 20px;
       }
 
       .study {
-        
+        text-align: left;
+        justify-content: center;
+
+
         .edu-heading {
-          padding-bottom: 5px;
+          /* padding-bottom: 5px; */
         }
         .edu-subheading {
           padding-bottom: 8px;
         }
         .edu-des {
-          width: 80%;
-          padding-bottom: 20px;
+          font-size: 15px;
+          padding-bottom: 30px;
           text-align: justify;
         }
 
@@ -437,21 +444,25 @@ nav {
 
 
     .skills-right {
-      width: 50%;
+      width: 60%;
 
       .skill-heading {
-        display: inline-block;
         border-bottom: 1px solid var(--primary-color);
-        margin-bottom: 30px;
+        display: inline-block;
         text-align: center;
-        align-items: center;
-        justify-content: center;
+        margin: 0 auto; 
+        text-align: center; 
+      }
+
+      .ts-1 {
+        margin-top: 20px;
       }
 
       .skill {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        text-align: left;
         padding-bottom: 20px;
 
         .skill-name{
@@ -461,15 +472,14 @@ nav {
 
         .progress-bar{
           flex: 1;
-          height: 6px;
-
+          height: 8px;
+          border-radius: 20px;
           background-color: #e6e6e6;
           overflow: hidden;
-          position: relative;
 
           .progress {
             height: 100%;
-            background-color: var(--primary-btn-color);
+            background-color: var(--primary-color);
           }
         }
 
