@@ -31,6 +31,9 @@ font-family: "Poppins", serif;
  
 }
 
+body {
+  scroll-behavior: smooth;
+}
 
 .btn-primary {
   font-size: 14px;
@@ -51,31 +54,40 @@ font-family: "Poppins", serif;
 
 a {
   text-decoration: none;
+  list-style: none;
+  color: var(--text-color-gray);
 }  
 
-
-.heading{
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 16px;
+li {
+  list-style: none;
 }
 
-header {
-  background-image: url(../images/developer.png);
-  background-repeat: no-repeat;
-  background-position: center left;
-  background-size: 80px;
-  margin-left: 15px;
-  min-height: 100vh;
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  backdrop-filter: blur(05px); /* Apply blur effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
 /* Nav Style  */
+
+header {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  backdrop-filter: none;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 111;
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 150px;
+  padding: 24px 150px;
+
   background-color: var(--text-color-white);
 
 
@@ -108,12 +120,29 @@ nav {
 
   }
 
+}
+
+.banner-section {
+
+  background-image: url(../images/developer.png);
+  background-repeat: no-repeat;
+  background-position: 2% 1%;
+  background-position: center left ;
+  background-size: 80px;
+  margin-left: 20px;
+  min-height: 100vh;
+  z-index: 222;
+  
+  display: flex;
+  
   
   .banner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 80px 50px 0 150px;
+    justify-content: space-between;
+    margin: 0px 50px 0 130px;
+    gap: 50px;
+
 
     .banner-content {
       width: 50%;
@@ -142,8 +171,10 @@ nav {
     }
 
     .banner-profile-pic {
+      width: 42%;
       display: grid;
       place-items: center ;
+      aspect-ratio: 1;
       border-radius: 50%;
       border: 5px solid var(--primary-color);
       transition: border .5s ease;
@@ -171,6 +202,8 @@ nav {
 
   }
 
+}  
+
 
 .about-section {
   display: flex;
@@ -178,7 +211,9 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 30px 150px;
+  padding: 0px 150px;
+  min-height: 100vh;
+  scroll-margin-top: -55px ;
 
   .about-heading {
     
