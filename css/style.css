@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 /* 
 font-family: "Open Sans", serif;
@@ -34,6 +34,7 @@ font-family: "Poppins", serif;
 }
 
 html {
+  font-size: 90%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding: 1rem;
@@ -63,7 +64,7 @@ html {
   cursor: pointer;
   background-color: var(--primary-color);
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   transition: transform 0.5s ease-in-out, background .5s ease;
 
     &:hover{
@@ -80,7 +81,7 @@ html {
   cursor: pointer;
   background-color: var(--primary-color);
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   transition: background 0.5s ease;
 
     &:hover{
@@ -107,7 +108,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 9rem;
+  padding: 1rem 10rem;
   background: transparent;
   backdrop-filter: none;
   display: flex;
@@ -127,46 +128,45 @@ header {
     }
   }
 
+    .nav-container {
+      position: relative;
+      display: flex;
+      align-items: center ;
+      justify-content: center;
+      
+      
+      .nav-menu {
+        border: .1rem solid var(--sub-bg-color);
+        border-radius: 2rem;
+        padding: 1rem 3rem;
+        box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1), 0px 4px 6px -4px rgba(0,0,0,0.1);
+        gap: 3rem;
+        display: flex;
+        align-items: center;
 
-  .nav-menu a {
-    position: relative;
-    font-size: 1.1rem;
-    color: var(--text-color-gray);
-    text-decoration: none;
-    font-weight: 400;
-    margin-left: 2rem;
-  
-    &:hover {
-      color: var(--primary-color);
-    }
-  }
+      a {
+        font-size: 1.05rem;
+        color: var(--text-color-gray);
+        text-decoration: none;
+        font-weight: 400;
+        
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      } 
 
+      .btn-primary-plain {
+        margin-left: 4rem;
+      }
+  } 
 
-}
-
-.nav-menu .menu-hover::after{
-  content: "";
-  position: absolute;
-  left:  0;
-  bottom: -.6rem ;
-  width: 100%;
-  height: 0.2rem;
-  background: var(--primary-color);
-  border-radius: .5rem ;
-  transform-origin: right;
-  transform:  scaleX(0);
-  transition: transform 0.5s ease-in-out ;
-}
-
-.nav-menu .menu-hover:hover::after {
-  transform-origin: left;
-  transform:  scaleX(1);
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.5); /* Transparent black background */
-  backdrop-filter: blur(05px); /* Apply blur effect */
-  box-shadow: 0 .25rem .38rem rgba(0, 0, 0, 0.1); /* Optional shadow */
+  background: rgba(255, 255, 255, 0.7); 
+  backdrop-filter: blur(08px); 
+  box-shadow: 0 .3rem .4rem rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -188,7 +188,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 3rem 0 8rem;
+    margin: 0 3rem 0 8.75rem;
     gap: 3.2rem;
 
 
@@ -313,7 +313,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0rem 9rem;
+  padding: 0rem 10rem;
   min-height: 100vh;
 
   .about-heading {
@@ -441,8 +441,9 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 8rem;
+  padding: 0rem 10rem;
   min-height: 100vh;
+  scroll-margin-top: 1.5rem;
 
   .do-heading {
     
@@ -451,20 +452,17 @@ header {
       border-bottom: .2rem solid var(--primary-color);
       padding: 1rem 0;
     }
-    
+
     .do-des {
-      padding: 1rem 4rem;
-      margin: 0;
+      padding: 1rem 0 ;
     }
   }
-
 
   .do-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: .6rem;
-    text-align: left;
+
 
     .card-content {
       display: flex;
@@ -482,6 +480,7 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         width: 18rem;
         height: 17rem;
         background-color: rgba(22, 196, 127, .1);
@@ -524,8 +523,10 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 8rem;
+  padding: 0 10rem;
   min-height: 100vh;
+  scroll-margin-top: 1.5rem;
+
 
   .resume-heading {
     
@@ -546,7 +547,7 @@ header {
     display: flex;
     justify-content: space-between;
     gap: 3.5rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     .skills-left {
       width: 45%;
@@ -560,7 +561,7 @@ header {
       }
 
       .edu-1 {
-        margin-top: 3rem;
+        margin-top: 1.5rem;
 
       }
 
@@ -602,7 +603,7 @@ header {
       }
 
       .ts-1 {
-        margin-top: 3rem;
+        margin-top: 1.5rem;
       }
 
       .skill {
