@@ -9,6 +9,10 @@ font-family: "Poppins", serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: .2s linear;
   font-family: "Poppins", serif; 
 }
 
@@ -26,14 +30,30 @@ font-family: "Poppins", serif;
   
   --sub-bg-color: #FBFBFF;
   --input-bg-color: #f5f5f5;
-  
-
  
 }
 
-body {
+html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding: 1rem;
+
+  &::-webkit-scrollbar{
+    width: .5rem;
+  }
+  
+  &::-webkit-scrollbar-track{
+    background: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb{
+    border-radius: 2rem;
+    background: var(--primary-color);
+  }
 }
+
+
+
 
 .btn-primary {
   font-size: 14px;
@@ -133,15 +153,15 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 3.125rem 0 8.125rem;
-    gap: 50px;
+    margin: 0 3rem 0 8rem;
+    gap: 3.2rem;
 
 
     .banner-content {
       width: 50%;
 
       .banner-greeting {
-        font-size: 1.875rem;
+        font-size: 1.8rem;
         color: var(--text-color-gray);
       }
 
@@ -164,30 +184,30 @@ nav {
     }
 
     .banner-profile-pic {
-      width: 42%;
+      width: 38%;
       display: grid;
       place-items: center ;
       aspect-ratio: 1;
       border-radius: 50%;
-      border: .4rem solid var(--primary-color);
+      border: .3rem solid var(--primary-color);
       transition: border .5s ease;
 
       
       &:hover {
-        border: .4rem solid var(--secondary-btn-color);
+        border: .3rem solid var(--secondary-btn-color);
       }
 
 
       .banner-image {
-       width: 31.25rem;
-       height: 31.25rem;
+       width: 32rem;
+       height: 32rem;
        border-radius: 50%;
        object-fit: cover;
-       padding: .6rem;
+       padding: .5rem;
        transition: transform 1s ease;
 
        &:hover{
-         transform: scale(1.05);
+         transform: scale(1.055);
        }
 
       }
@@ -204,9 +224,8 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 9.375rem;
+  padding: 0rem 9rem;
   min-height: 100vh;
-  scroll-margin-top: -3.438rem ;
 
   .about-heading {
     
@@ -214,6 +233,7 @@ nav {
       display: inline-block;
       border-bottom: .15rem solid var(--primary-color);
       padding: 1rem 0;
+
     }
     
     .about-des {
@@ -327,12 +347,13 @@ nav {
 
 
 .do-section {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 8.125rem;
+  padding: 0 8rem;
+  min-height: 100vh;
 
   .do-heading {
     
@@ -364,19 +385,19 @@ nav {
       text-align: center;
       width: 100%;
       height: auto;
-      gap: 1.25rem;
-      padding: .6rem;
+      gap: 1.5rem;
+      padding: 1rem;
       
       
       .card {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 15.625rem;
-        height: 17.5rem;
+        width: 18rem;
+        height: 17rem;
         background-color: rgba(22, 196, 127, .1);
-        border-radius: 0.625rem;
-        border: 0.188rem solid transparent;
+        border-radius: 0.6rem;
+        border: 0.18rem solid transparent;
         transition: border 1s ease-in-out, transform 1s ease;
         
         &:hover{
@@ -388,15 +409,15 @@ nav {
 
         .card-img{
           width: 20%;
-          padding-top: 0.625rem;
+          padding-top: 0.6rem;
         }
         .card-heading{
-          font-size: 0.875rem;
-          padding: 0.625rem;
+          font-size: 1rem;
+          padding: 0.7rem;
         }
         .card-content{
-          font-size: 0.875rem;
-          line-height: 1.8;
+          font-size: .9rem;
+          line-height: 1.6;
           opacity: .8;
           border: none;
           padding-top: 0rem;
@@ -414,13 +435,14 @@ nav {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1.875rem 8.125rem;
+  padding: 0 8rem;
+  min-height: 100vh;
 
   .resume-heading {
     
     .resume-title {
       display: inline-block;
-      border-bottom: 0.188rem solid var(--primary-color);
+      border-bottom: 0.2rem solid var(--primary-color);
       padding: 1rem 0;
     }
     
@@ -434,14 +456,14 @@ nav {
   .resume-container {
     display: flex;
     justify-content: space-between;
-    gap: 3.2rem;
-    margin-top: .625rem;
+    gap: 3.5rem;
+    margin-top: 2rem;
 
     .skills-left {
       width: 45%;
 
       .skill-heading {
-        border-bottom: .063rem solid var(--primary-color);
+        border-bottom: .065rem solid var(--primary-color);
         display: inline-block;
         text-align: center;
         margin: 0 auto; 
@@ -449,23 +471,26 @@ nav {
       }
 
       .edu-1 {
-        margin-top: 1.25rem;
+        margin-top: 3rem;
 
       }
 
       .study {
         text-align: left;
         justify-content: center;
-
-
-        .edu-heading {
-          /* padding-bottom: 5px; */
+        
+        .edu-heading{
+          font-size: 1.2rem;
+          font-weight: 500;
         }
+        
         .edu-subheading {
-          padding-bottom: .5rem;
+          padding-bottom: .8rem;
+          font-weight: 400;
         }
+
         .edu-des {
-          font-size: .9rem;
+          font-size: 1rem;
           padding-bottom: 1.8rem;
           text-align: justify;
         }
@@ -480,7 +505,7 @@ nav {
       width: 50%;
 
       .skill-heading {
-        border-bottom: 1px solid var(--primary-color);
+        border-bottom: 0.065rem solid var(--primary-color);
         display: inline-block;
         text-align: center;
         margin: 0 auto; 
@@ -488,7 +513,7 @@ nav {
       }
 
       .ts-1 {
-        margin-top: 1.25rem;
+        margin-top: 3rem;
       }
 
       .skill {
@@ -496,17 +521,17 @@ nav {
         justify-content: space-between;
         align-items: center;
         text-align: left;
-        padding-bottom: 1.25rem;
+        padding-bottom: 1.5rem;
 
         .skill-name{
-          width: 6.25rem;
-          font-weight: 500;
+          width: 7rem;
+          font-weight: 400;
         }
 
         .progress-bar{
           flex: 1;
           height: 0.5rem;
-          border-radius: 1.25rem;
+          border-radius: 1.5rem;
           background-color: #e6e6e6;
           overflow: hidden;
 
@@ -517,10 +542,11 @@ nav {
         }
 
         .skill-percentage {
-          width: 3.75rem;
-          text-align: right;
+          width: 3rem;
+          padding-left: 1rem;
+          text-align: left;
           font-weight: 500;
-          font-size: 0.75rem;
+          font-size: .9rem;
         }
 
 
