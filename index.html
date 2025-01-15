@@ -7,7 +7,10 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="./css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media-queries.css">
 
 
 </head>
@@ -22,12 +25,15 @@
     <nav class="nav-menu">
       <a class="menu-hover" href="#home">Home</a>
       <a class="menu-hover" href="#about">About</a>
-      <a class="menu-hover" href="#tech">Tech</a>
-      <a class="menu-hover" href="#skill">Skills</a>
+      <a class="menu-hover" href="#skill">Skill</a>
+      <a class="menu-hover" href="#resume">Resume</a>
       <a class="menu-hover" href="#contact">Contact</a>
     </nav>
     
      <a href=""><button class="btn-primary-plain">Hire Me</button></a>
+     <div class="bx bx-menu toggle_btn" id="menu-icon" >
+      <i class="fa-solid fa-bars" style="color: #0dba4b;"></i>
+    </div>
 
   </div>
 
@@ -257,7 +263,96 @@
 
     </section>
 
-    <section id="skill" class="resume-section">
+    <section  id="skill" class="skill-stake">
+
+      
+
+      <div class="skill-container">
+
+        <!-- .card-content>.card*4>img.card-img+h3.card-heading+p.card-content -->
+
+        <div class="card-content">
+
+          <div class="card card-1">
+            <img src="images/icons/html.svg" alt="" class="card-img">
+            <i class='bx bxl-html5'></i>
+            <h3 class="card-heading">HTML</h3>
+            <p class="card-content">The foundation for structuring content on the web.</p>
+          </div>
+
+          <div class="card card-2">
+            <img src="images/icons/css3.svg" alt="" class="card-img">
+            <i class='bx bxl-css3'></i>
+            <h3 class="card-heading">CSS3</h3>
+            <p class="card-content">
+              Styles and designs that bring your web pages to life. </p>
+          </div>
+
+          <div class="card card-3">
+            <img src="images/icons/tailwind-css.svg" alt="" class="card-img">
+            <i class='bx bxl-tailwind-css' ></i>
+            <h3 class="card-heading">Tailwind CSS</h3>
+            <p class="card-content">Utility-first framework for rapid, responsive UI designs. </p>
+          </div>
+
+          <div class="card card-4">
+            <img src="images/icons/javascript.svg" alt="" class="card-img">
+            <i class='bx bxl-javascript' ></i>
+            <h3 class="card-heading">JavaScript</h3>
+            <p class="card-content">
+              Dynamic scripting for interactive and functional web applications.</p>
+          </div>
+
+
+          <div class="card card-5">
+            <img src="images/icons/react.svg" alt="" class="card-img">
+            <i class='bx bxl-react' ></i>
+            <h3 class="card-heading">React</h3>
+            <p class="card-content"> Component-based library for building fast, modern UIs.</p>
+          </div>
+
+          <div class="card card-6">
+            <img src="images/icons/firebase.svg" alt="" class="card-img">
+            <i class='bx bxl-firebase' ></i>
+            <h3 class="card-heading">Firebase</h3>
+            <p class="card-content">
+              Backend-as-a-Service for real-time data and authentication.</p>
+          </div>
+
+          <div class="card card-7">
+            <img src="images/icons/nodejs.svg" alt="" class="card-img">
+            <i class='bx bxl-nodejs'></i>
+            <h3 class="card-heading">Node JS</h3>
+            <p class="card-content">
+              JavaScript runtime for building scalable server-side applications.</p>
+          </div>
+
+          <div class="card card-8">
+            <img src="images/icons/mongodb.svg" alt="" class="card-img">
+            <i class='bx bxl-mongodb'></i>
+            <h3 class="card-heading">MongoDB</h3>
+            <p class="card-content">
+              NoSQL database for flexible, scalable data storage.</p>
+          </div>
+
+
+          
+        </div>
+
+
+
+      </div>
+
+      <div class="skill-heading">
+        <h2 class="do-title">My Skill <br> 
+          <span>Tools</span></h2>
+        <p class="do-des">"Skilled web developer with a flair for design, creating websites that make an impact." </p>
+      </div>
+
+
+    </section>
+
+    <section id="resume" class="resume-section">
 
       <div class="resume-heading">
         <h2 class="resume-title">A Summary of My skills</h2>
