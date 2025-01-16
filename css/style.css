@@ -4,9 +4,11 @@
 
 
 /* 
-font-family: "Open Sans", serif;
-font-family: "Poppins", serif; 
- font-family: "Montserrat", serif;
+  font-family: "Open Sans", serif;
+  font-family: "Poppins", serif; 
+  font-family: "Montserrat", serif;
+  font-family: "Chillax-Regular", sans-serif;
+  font-family: "Chillax-variable", sans-serif;
 */
 
 * {
@@ -17,8 +19,8 @@ font-family: "Poppins", serif;
   border: none;
   text-decoration: none;
   transition: .2s linear;
-  font-family: "Poppins", serif; 
-
+  font-family: "Chillax-variable", sans-serif;
+  font-family: "Poppins", serif;
 }
 
 :root {
@@ -377,6 +379,7 @@ header {
     align-items: center;
     margin: 0 3rem 0 10rem;
 
+
     .banner-content {
       z-index: 10;
       text-transform: uppercase;
@@ -403,19 +406,23 @@ header {
         color: var(--text-color-white);
         font-size: 9rem;
         line-height: .8;
+      font-family: "Chillax-Regular", sans-serif;
+
       }
       
       .designation {
-        display: inline-block;
         font-size: 5rem;
-        font-weight: bold;
         margin-bottom: 1.25rem;
         color: var(--text-color-white);
+        font-family: "Chillax-Regular", sans-serif;
+
 
         span {
           position: relative;
           display: inline-block;
           color: transparent;
+          font-family: "Chillax-variable", sans-serif;
+
           -webkit-text-stroke: 0.05rem var(--primary-color);
           animation: txtAnim 20s linear infinite;
           animation-delay: calc(-5s * var(--i));
@@ -436,13 +443,14 @@ header {
 
       .banner-des {
         width: 50%;
-        font-size: 1rem;
-        line-height: 2;
+        font-size: 1.3rem;
+        line-height: 1.5;
         text-transform:none ;
         text-align: justify;
+        font-family: "Chillax-Regular", serif;
         color: var(--text-color-gray);
         color: var(--text-color-white);
-        margin-bottom: .9rem;
+        margin-bottom: 2rem;
       }
 
       .btn-primary {
