@@ -22,8 +22,8 @@
 @font-face {
   font-family: 'Chillax-Regular';
   src: url('../fonts/chillax-fonts/Chillax-Regular.woff2') format('woff2'),
-       url('../fonts/chillax-fonts/Chillax-Regular.woff') format('woff'),
-       url('../fonts/chillax-fonts/Chillax-Regular.ttf') format('truetype');
+       url('./fonts/chillax-fonts/Chillax-Regular.woff') format('woff'),
+       url('fonts/chillax-fonts/Chillax-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
