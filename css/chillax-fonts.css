@@ -22,8 +22,8 @@
 @font-face {
   font-family: 'Chillax-Regular';
   src: url('../fonts/chillax-fonts/Chillax-Regular.woff2') format('woff2'),
-       url('./fonts/chillax-fonts/Chillax-Regular.woff') format('woff'),
-       url('fonts/chillax-fonts/Chillax-Regular.ttf') format('truetype');
+       url('../fonts/chillax-fonts/Chillax-Regular.woff') format('woff'),
+       url('../fonts/chillax-fonts/Chillax-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -68,10 +68,10 @@
 */
 
 @font-face {
-  font-family: 'Chillax-Variable' sans-serif;
-  src: url("../fonts/chillax-fonts/Chillax-Variable.woff") format('woff2'),
-       url('./fonts/chillax-fonts/Chillax-Variable.woff') format('woff'),
-       url('fonts/chillax-fonts/vaChillax-Variable.ttf') format('truetype');
+  font-family: 'Chillax-Variable';
+  src: url("../fonts/chillax-fonts/Chillax-Variable.woff2") format('woff2'),
+       url('../fonts/chillax-fonts/Chillax-Variable.woff') format('woff'),
+       url('../fonts/chillax-fonts/Chillax-Variable.ttf') format('truetype');
   font-weight: 200 700;
   font-display: swap;
   font-style: normal;
